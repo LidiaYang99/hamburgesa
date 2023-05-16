@@ -1,0 +1,472 @@
+/* reset必须要在第一行，否则会把后面的sobrescribir */
+@import url(reset.css);
+
+@import url('https://fonts.googleapis.com/css2?family=Handlee&family=Montserrat:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --funteprincipal: 'Montserrat', sans-serif;
+    --funetetitulo: 'Handlee', cursive;
+    --colorprincipal: #fa573a;
+    --colorsecundario: #212423;
+    --margingrid: 1em;
+    --font-size: 1em;
+    --anchomaximo: 68.75em;
+}
+
+.container {
+    max-width: var(--anchomaximo);
+    margin: 0 auto;
+}
+
+body {
+    font-family: var(--funteprincipal);
+    font-size: var(--font-size);
+}
+
+/*------ Inicio header ------*/
+
+header .nav-top {
+    background-color: var(--colorsecundario);
+    padding: 1.25em 0;
+}
+
+header .nav-top .container {
+    display: flex;
+    justify-content: space-around;
+}
+
+header .nav-top a {
+    color: var(--colorprincipal);
+    text-decoration: none;
+}
+
+header .nav-top a i {
+    font-size: 150%;
+}
+
+header .nav-top span {
+    color: #fff;
+    display: none;
+}
+
+
+header nav {
+    padding: 1.25em;
+}
+
+header nav .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+header nav .menu {
+    width: 100%;
+}
+
+header nav .hamburguesa {
+    cursor: pointer;
+    width: 1.875em;
+}
+
+header nav .hamburguesa div {
+    border-top: 2px solid #aaa;
+    margin-bottom: 0.625em;
+}
+
+header nav figure {
+    max-width: 100px;
+}
+
+
+header nav .menu a {
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    text-align: center;
+    padding: 1.25em;
+    color: #aaa;
+    border-bottom: 1px solid #aaa;
+}
+
+header nav .menu li:last-child a {
+    border-bottom: 0px;
+}
+
+/*------- Final header --------*/
+
+
+/* -------Inicio hero ---------*/
+
+.hero {
+    background: url(../images/fondo.jpg);
+    background-color: #978e8e;
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-position: 50% 60%;
+    height: 90vh;
+}
+
+.hero .container {
+    padding: 8.125em 0 0 1.25em;
+}
+
+.hero .titulo {
+    width: 70%;
+}
+
+.hero h2 {
+    font-family: var(--funetetitulo);
+    color: #fff;
+    font-size: 3em;
+}
+
+.hero h4 {
+    color: var(--colorprincipal);
+    font-size: 1.5em;
+    padding: 1.25em 0;
+}
+
+.hero p {
+    color: #fff;
+    font-size: 1.3em;
+}
+
+.hero .titulo>a {
+    display: block;
+    width: 180px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    font-size: 1.1em;
+    color: #fff;
+    background-color: var(--colorprincipal);
+    margin: 1.25em 0;
+}
+
+.hero .titulo>a::after {
+    content: ' ➙';
+}
+
+.hero .icono ul {
+    display: flex;
+}
+
+.hero .icono ul a {
+    display: block;
+    color: #fff;
+    font-size: 2em;
+}
+
+.hero .icono ul li:nth-child(2) {
+    padding: 0 2.5em;
+}
+
+/*----------- Final hero -----------*/
+
+
+/*---------- Inicio servicio ------------*/
+
+
+.servicio {
+    width: 100%;
+    padding: 1.25em;
+    margin-top: 1.25em;
+}
+
+.servicio h2 {
+    text-align: center;
+    font-family: var(--funetetitulo);
+    font-size: 3em;
+}
+
+.servicio h2 span {
+    color: var(--colorprincipal);
+}
+
+.servicio .hr {
+    position: relative;
+    margin: 0.625em auto;
+    height: 4px;
+    width: 150px;
+    background-color: var(--colorprincipal);
+}
+
+.servicio .hr span {
+    position: absolute;
+    font-size: 1.8em;
+    font-weight: bold;
+    color: var(--colorprincipal);
+    left: 50%;
+    top: -350%;
+    transform: translate(-50%);
+}
+
+.servicio .icono {
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    font-size: 1.5em;
+    color: var(--colorprincipal);
+    text-align: center;
+    border: 2px solid var(--colorprincipal);
+}
+
+.servicio .detalle h4 {
+    font-weight: bold;
+    margin: 0.625em 0;
+}
+
+.servicio .detalle article a {
+    display: block;
+    font-weight: bold;
+    width: 150px;
+    color: var(--colorprincipal);
+    margin: 5px 0 20px 0;
+}
+
+.servicio .detalle article a::after {
+    content: ' ➙';
+}
+
+.servicio .detalle article {
+    margin-top: 1.25em;
+    border-bottom: 2px solid gray;
+}
+
+/*---------- Final servicio ------------*/
+
+
+/* -----------Inicio about -------------*/
+
+
+.about {
+    width: 100%;
+    padding: 1.25em;
+    margin-top: 1.25em;
+}
+
+.about h2 {
+    text-align: center;
+    font-family: var(--funetetitulo);
+    font-size: 3em;
+}
+
+.about h2 span {
+    color: var(--colorprincipal);
+}
+
+.about .hr {
+    position: relative;
+    margin: 0.625em auto;
+    height: 4px;
+    width: 150px;
+    background-color: var(--colorprincipal);
+}
+
+.about .hr span {
+    position: absolute;
+    font-size: 1.8em;
+    font-weight: bold;
+    color: var(--colorprincipal);
+    left: 50%;
+    top: -350%;
+    transform: translate(-50%);
+}
+
+.about .history {
+    position: relative;
+    margin-top: 3.125em;
+}
+
+.about .history figure {
+    position: relative;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.about .history div {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border: 5px solid var(--colorprincipal);
+    transform: rotate(8deg);
+    z-index: -1;
+}
+
+.about .history article {
+    margin-top: 50px;
+}
+
+.about .history article h3 {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.about .history article h4 {
+    font-size: 1.2em;
+    color: var(--colorprincipal);
+    margin: 20px 0;
+}
+
+.about .history article a {
+    display: block;
+    width: 180px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    font-size: 1.1em;
+    color: #fff;
+    background-color: var(--colorprincipal);
+    margin: 1.25em 0;
+}
+
+.about .history article a::after {
+    content: ' ➙';
+}
+
+main {
+    position: relative;
+}
+
+.arriba {
+    position: absolute;
+    right: 0.625em;
+    bottom: 0.625em;
+    display: block;
+    width: 35px;
+    height: 35px;
+    border-radius: 5px;
+    line-height: 35px;
+    font-size: 1.5em;
+    text-align: center;
+    color: #fff;
+    background-color: var(--colorprincipal);
+}
+
+
+
+
+
+
+/* -----------Final about --------------*/
+
+
+
+
+
+
+
+
+
+
+
+/*-------------- Inicio Footer -------------*/
+footer {
+    width: 100%;
+    height: 6vh;
+    line-height: 6vh;
+    margin-top: 20px;
+    background-color: var(--colorsecundario)
+}
+
+footer div {
+    color: #fff;
+}
+
+/*-------------- Final Footer --------------*/
+
+
+
+/* inicio mediaqueries */
+@media(min-width:48em) {
+
+    /* header */
+    header .nav-top .container {
+        justify-content: space-between;
+    }
+
+    header .nav-top a i {
+        font-size: 120%;
+    }
+
+    header .nav-top span {
+        display: inline;
+    }
+
+    /* hero */
+
+    .hero .container {
+        padding: 8.125em 0 0 0
+    }
+
+    /* servicio */
+    .servicio .detalle {
+        display: flex;
+    }
+
+    .servicio .detalle article {
+        padding: 0.9375em;
+        width: 33.33%;
+        border-left: 2px solid gray;
+        border-bottom: 0;
+    }
+
+    /* about-history */
+
+    .history {
+        display: flex;
+        /* flex-wrap:nowrap */
+    }
+
+    .about .history figure {
+        position: relative;
+        width: 40%;
+    }
+
+    .about .history article {
+        width: 50%;
+    }
+
+}
+
+@media(min-width:62.75em) {
+    header nav .menu {
+        /* 为了可以让flex自动ajustar */
+        width: auto;
+    }
+
+    header nav .hamburguesa {
+        display: none;
+    }
+
+    header nav .menu li {
+        display: inline-block;
+    }
+
+    header nav .menu a {
+        padding: 0.5em 0 1.25em 1.25em;
+        border-bottom: 0;
+    }
+
+}
