@@ -197,13 +197,6 @@ header nav .menu li:last-child a {
 /*---------- Inicio servicio ------------*/
 
 
-
-
-/*---------- Final servicio ------------*/
-
-
-/* -----------Inicio about -------------*/
-
 /* 因为接下来的板块中, 有些是一样的，所以可以一起写 */
 main section {
     padding: 2.125em var(--margingrid);
@@ -300,7 +293,56 @@ main section .enlace {
 }
 
 
+/*---------- Final servicio ------------*/
 
+
+/* -----------Inicio about -------------*/
+main #aboutus .grid figure {
+    /* background-color: tomato;
+   height: 400px; */
+
+    width: 100%;
+}
+
+main #aboutus .grid>div {
+    /*provisional*/
+    /* background-color: violet;
+    height: 400px; */
+
+    /* 因为使用了felx，所以这里需要poner ancho */
+    width: 100%;
+}
+
+main #aboutus .grid h3 {
+    font-size: 110%;
+    font-weight: 700;
+}
+
+main #aboutus .grid h4 {
+    margin: var(--margingrid) 0;
+    color: var(--colorprincipal);
+}
+
+main #aboutus .imagen {
+    width: 90%;
+    margin: 1.5em auto;
+}
+
+main #aboutus .imagen .marco {
+    border: 3px solid var(--colorprincipal);
+    transform: rotateZ(10deg);
+    /* se anima en entrada y salid */
+    transition: 1s;
+}
+
+main #aboutus .imagen .marco img {
+    transform: rotateZ(-10deg);
+    transition: 1s;
+}
+
+main #aboutus .imagen:hover :is(.marco, .marco img) {
+    transform: rotateZ(0deg);
+}
 
 
 
@@ -373,6 +415,7 @@ footer a:hover {
         text-align: left;
     }
 
+    /* aboutus */
     main #servicio article {
         width: 50%;
         border-bottom: 0;
@@ -381,8 +424,17 @@ footer a:hover {
         margin: var(--margingrid) 0;
     }
 
-    main #servicio article:last-child {
-        width: 100%;
+    main #aboutus .grid figure,
+    main #aboutus .grid>div {
+        width: 50%;
+    }
+
+    main #aboutus .grid h3 {
+        margin-top: var(--margingrid);
+    }
+
+    main #aboutus .imagen {
+        margin: var(--margingrid) 0 2em 0;
     }
 
 }
@@ -411,7 +463,7 @@ footer a:hover {
     }
 
     main #servicio article {
-        width: 33.33%; 
+        width: 33.33%;
     }
 
     main #servicio article:last-child {
