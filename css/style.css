@@ -166,7 +166,7 @@ header nav .menu li:last-child a {
     color: var(--colorprincipal);
 }
 
-.botton:hover i {
+.boton:hover i {
     /* solo en la entrada hay el efecto */
     transition: transform 0.5s;
     transform: translateX(5px);
@@ -204,8 +204,100 @@ header nav .menu li:last-child a {
 
 /* -----------Inicio about -------------*/
 
+/* 因为接下来的板块中, 有些是一样的，所以可以一起写 */
+main section {
+    padding: 2.125em var(--margingrid);
+}
+
+main section h2 {
+    color: black;
+    font-family: var(--funetetitulo);
+    font-size: 2em;
+    text-align: center;
+}
+
+main section h2 span {
+    color: var(--colorprincipal);
+}
 
 
+main section .underline {
+    position: relative;
+    width: 6.25rem;
+    margin: 0 auto;
+}
+
+main section .underline hr {
+    position: absolute;
+    /* cambio de capa 因为提升了，所以没有宽度了，要再加width */
+    width: 100%;
+    top: -2px;
+    /* 这里是border-color */
+    border-color: var(--colorprincipal);
+}
+
+main section .underline span {
+    display: block;
+    text-align: center;
+    color: var(--colorprincipal);
+    font-weight: 700;
+}
+
+main section .grid {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+main section:last-child {
+    margin-bottom: 4em;
+}
+
+
+
+
+
+
+
+
+
+
+main #servicio article {
+    border-bottom: 1px solid #aaa;
+    padding: 1.5em 0;
+}
+
+main #servicio article>div i {
+    /* i 有点特殊，不转换也可以加padding. 但最好还是都加上吧 */
+    color: var(--colorprincipal);
+    font-size: 140%;
+    border: 1px solid var(--colorprincipal);
+    padding: 0.5em;
+    display: inline-block;
+}
+
+main #servicio article h3 {
+    margin: var(--margingrid) 0;
+    font-size: 110%;
+    font-weight: 700;
+}
+
+
+main section p {
+    color: #666;
+    line-height: 1.15em;
+    margin-bottom: var(--margingrid);
+}
+
+main section .enlace {
+    color: var(--colorprincipal);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.fa-truck {
+    /* 给小车车的icono反转 */
+    transform: rotateY(180deg);
+}
 
 
 
@@ -281,6 +373,18 @@ footer a:hover {
         text-align: left;
     }
 
+    main #servicio article {
+        width: 50%;
+        border-bottom: 0;
+        border-left: 1px solid gray;
+        padding: 1.5em;
+        margin: var(--margingrid) 0;
+    }
+
+    main #servicio article:last-child {
+        width: 100%;
+    }
+
 }
 
 @media(min-width:62.75em) {
@@ -304,5 +408,13 @@ footer a:hover {
 
     .hero .container {
         padding: 0;
+    }
+
+    main #servicio article {
+        width: 33.33%; 
+    }
+
+    main #servicio article:last-child {
+        width: 33.33%;
     }
 }
