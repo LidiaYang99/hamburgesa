@@ -152,7 +152,36 @@ header nav .menu li:last-child a {
 
 
 /*-------------- Inicio Footer -------------*/
+footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    background-color: var(--colorsecundario);
+    padding: 1.25em 0px;
+    text-align: center;
+    color: white;
+    font-size: 110%;
+}
 
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: var(--colorsecundario);
+}
+
+.flecha a {
+    display: block;
+    color: var(--colorprincipal);
+    /* 因为是icono，所以大小根据font-size来 */
+    font-size: 300%;
+    position: fixed;
+    /* 这里需要是rem */
+    bottom: 4.375rem;
+    right: 1.25rem;
+}
 
 /*-------------- Final Footer --------------*/
 
@@ -172,6 +201,11 @@ header nav .menu li:last-child a {
 
     header .nav-top span {
         display: inline;
+    }
+
+    /* footer */
+    footer {
+        text-align: left;
     }
 
 }
