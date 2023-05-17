@@ -123,79 +123,7 @@ header nav .menu li:last-child a {
 /*------- Final header --------*/
 
 
-/* -------Inicio hero ---------*/
-.hero {
-    background-image: url(../images/fondo.jpg);
-    height: 60vh;
-    background-size: cover;
-    background-position: center center;
-    background-blend-mode: multiply;
-    background-color: #888;
-    /* 通过给padding-vh，将内容定在20vh的地方 */
-    padding-top: 17vh;
-    color: white;
-}
-
-.hero h1 {
-    font-family: var(--funetetitulo);
-    font-size: 2.25em;
-}
-
-.hero h2 {
-    color: var(--colorprincipal);
-    font-size: 1.25em;
-    margin: var(--margingrid) 0;
-}
-
-.hero p {
-    font-size: 1.15em;
-}
-
-.boton {
-    display: inline-block;
-    background-color: var(--colorprincipal);
-    padding: 1.15em;
-    color: white;
-    text-decoration: none;
-    border: 1px solid var(--colorprincipal);
-    /* transition: 0.5s; */
-}
-
-.boton:hover {
-    background-color: transparent;
-    color: var(--colorprincipal);
-}
-
-.boton:hover i {
-    /* solo en la entrada hay el efecto */
-    transition: transform 0.5s;
-    transform: translateX(5px);
-}
-
-.hero .container>div {
-    margin: var(--margingrid) 0;
-}
-
-.hero .social {
-    display: flex;
-    width: 10em;
-    justify-content: space-between;
-}
-
-.hero .social a {
-    color: white;
-    font-size: 2em;
-}
-
-.hero .container {
-    padding: 0 var(--margingrid);
-}
-
-/*----------- Final hero -----------*/
-
-
 /*---------- Inicio servicio ------------*/
-
 
 /* 因为接下来的板块中, 有些是一样的，所以可以一起写 */
 main section {
@@ -248,27 +176,34 @@ main section:last-child {
 
 
 
-
-
-
-
-
-
-main #servicio article {
-    border-bottom: 1px solid #aaa;
-    padding: 1.5em 0;
+main #blog article {
+    position: relative;
 }
 
-main #servicio article>div i {
-    /* i 有点特殊，不转换也可以加padding. 但最好还是都加上吧 */
-    color: var(--colorprincipal);
-    font-size: 140%;
-    border: 1px solid var(--colorprincipal);
-    padding: 0.5em;
-    display: inline-block;
+
+main #blog article .caja {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    width: 60px;
+    height: 60px;
+    background-color: var(--colorprincipal);
+    opacity: 0.8;
+    color: #fff;
+    font-size: 1.1em;
+    font-weight: bold;
+    padding: 3px;
+    text-align: center;
+    line-height: 1.6;
 }
 
-main #servicio article h3 {
+main #blog .grid article {
+    width: 50%;
+    padding: 0.9375em;
+}
+
+
+main #blog article h3 {
     margin: var(--margingrid) 0;
     font-size: 110%;
     font-weight: 700;
@@ -287,75 +222,8 @@ main section .enlace {
     font-weight: 700;
 }
 
-.fa-truck {
-    /* 给小车车的icono反转 */
-    transform: rotateY(180deg);
-}
-
 
 /*---------- Final servicio ------------*/
-
-
-/* -----------Inicio about -------------*/
-main #aboutus .grid figure {
-    /* background-color: tomato;
-   height: 400px; */
-
-    width: 100%;
-}
-
-main #aboutus .grid>div {
-    /*provisional*/
-    /* background-color: violet;
-    height: 400px; */
-
-    /* 因为使用了felx，所以这里需要poner ancho */
-    width: 100%;
-}
-
-main #aboutus .grid h3 {
-    font-size: 110%;
-    font-weight: 700;
-}
-
-main #aboutus .grid h4 {
-    margin: var(--margingrid) 0;
-    color: var(--colorprincipal);
-}
-
-main #aboutus .imagen {
-    width: 90%;
-    margin: 1.5em auto;
-}
-
-main #aboutus .imagen .marco {
-    border: 3px solid var(--colorprincipal);
-    transform: rotateZ(10deg);
-    /* se anima en entrada y salid */
-    transition: 1s;
-}
-
-main #aboutus .imagen .marco img {
-    transform: rotateZ(-10deg);
-    transition: 1s;
-}
-
-main #aboutus .imagen:hover :is(.marco, .marco img) {
-    transform: rotateZ(0deg);
-}
-
-
-
-/* -----------Final about --------------*/
-
-
-
-
-
-
-
-
-
 
 
 /*-------------- Inicio Footer -------------*/
@@ -410,31 +278,14 @@ footer a:hover {
         display: inline;
     }
 
+    /* blog */
+    main #blog .grid article {
+        width: 33.33%;
+    }
+
     /* footer */
     footer {
         text-align: left;
-    }
-
-    /* aboutus */
-    main #servicio article {
-        width: 50%;
-        border-bottom: 0;
-        border-left: 1px solid gray;
-        padding: 1.5em;
-        margin: var(--margingrid) 0;
-    }
-
-    main #aboutus .grid figure,
-    main #aboutus .grid>div {
-        width: 50%;
-    }
-
-    main #aboutus .grid h3 {
-        margin-top: var(--margingrid);
-    }
-
-    main #aboutus .imagen {
-        margin: var(--margingrid) 0 2em 0;
     }
 
 }
@@ -458,15 +309,4 @@ footer a:hover {
         border-bottom: 0;
     }
 
-    .hero .container {
-        padding: 0;
-    }
-
-    main #servicio article {
-        width: 33.33%;
-    }
-
-    main #servicio article:last-child {
-        width: 33.33%;
-    }
 }
