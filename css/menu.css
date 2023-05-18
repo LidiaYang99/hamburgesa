@@ -174,7 +174,8 @@ main section:last-child {
 }
 
 main .row {
-    /* display: flex; */
+    display: flex;
+    flex-wrap: wrap;
     margin-top: var(--margingrid);
 }
 
@@ -218,24 +219,34 @@ main .row {
 }
 
 
+.row .contenido {
+    padding: 0.625em 1.875em;
+}
 
+.row .contenido article {
+    padding: 1em 0;
+}
 
+.row .contenido h4 {
+    font-size: 0.9em;
+    margin: 0.9375em 0 0.625em 0;
+    font-weight: 700;
+}
 
-
-
-
-
-
-
-
-
-
+.row .contenido h4 span {
+    color: var(--colorprincipal);
+    font-weight: none;
+    padding-left: 0.625em;
+}
 
 
 main section .enlace {
+    display: block;
     color: var(--colorprincipal);
     text-decoration: none;
-    font-weight: 700;
+    margin-top: 0.9375em;
+    font-size: 0.8em;
+  
 }
 
 /*---------- Final menu ------------*/
