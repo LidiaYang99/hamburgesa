@@ -131,7 +131,7 @@ main section {
 }
 
 main section h2 {
-    color: black;
+    color: #fff;
     font-family: var(--funetetitulo);
     font-size: 2em;
     text-align: center;
@@ -164,19 +164,14 @@ main section .underline span {
     font-weight: 700;
 }
 
-main section .grid {
-    display: flex;
-    flex-wrap: wrap;
-}
-
 main section:last-child {
     margin-bottom: 3em;
 }
 
 main .row {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: var(--margingrid);
+    /* display: flex;
+    flex-wrap: wrap; */
+    margin-top: 2em;
 }
 
 .row ul li {
@@ -246,7 +241,7 @@ main section .enlace {
     text-decoration: none;
     margin-top: 0.9375em;
     font-size: 0.8em;
-  
+
 }
 
 /*---------- Final menu ------------*/
@@ -303,6 +298,53 @@ footer a:hover {
     header .nav-top span {
         display: inline;
     }
+
+    /* menu */
+
+    main .row {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 60px;
+    }
+
+    .row .opcion {
+        margin: 2.5em 5em 0 0;
+        width: 23%;
+    }
+
+    .row ul li {
+        padding: 0.625em 0.625em;
+        margin: 3px 0;
+        border-radius: 3px;
+    }
+
+    .row .show {
+        margin-top: 6.25em;
+    }
+
+    .row .show p {
+        line-height: 1.5em;
+    }
+
+    .row .contenido {
+        width: 60%;
+    }
+
+    .row .contenido article {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .row .contenido figure {
+        width: 30%;
+        margin: 0.9375em 0.9375em 0 0;
+    }
+
+
+
+
+
+
 
 
     /* footer */
