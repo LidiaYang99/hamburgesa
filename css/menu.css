@@ -127,6 +127,7 @@ header nav .menu li:last-child a {
 
 main section {
     padding: 2.125em var(--margingrid);
+    background-color: var(--colorsecundario);
 }
 
 main section h2 {
@@ -169,15 +170,52 @@ main section .grid {
 }
 
 main section:last-child {
-    margin-bottom: 4em;
+    margin-bottom: 3em;
 }
 
+main .row {
+    /* display: flex; */
+    margin-top: var(--margingrid);
+}
 
+.row ul li {
+    padding: 5px 8px;
+    border-radius: 3px;
+}
 
+.row ul li a {
+    display: block;
+    color: #fff;
+}
 
+.row ul li:first-child {
+    background-color: var(--colorprincipal);
+}
 
+.row .show {
+    position: relative;
+    margin-top: 1.875em;
+}
 
+.row h4 {
+    font-weight: 700;
+    color: #fff;
+}
 
+.row .show hr {
+    position: absolute;
+    width: 50px;
+    border-color: var(--colorprincipal);
+}
+
+.row .show p {
+    margin-top: 20px;
+}
+
+.row p {
+    font-size: 0.8em;
+    color: #999;
+}
 
 
 
