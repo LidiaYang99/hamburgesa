@@ -187,8 +187,8 @@ main #blog article .caja {
     left: 15px;
     width: 60px;
     height: 60px;
-    background-color: var(--colorprincipal);
-    opacity: 0.8;
+    background-color:  rgba(233, 16, 16, 0.65);
+    /* opacity: 0.9; */
     color: #fff;
     font-size: 1.1em;
     font-weight: bold;
